@@ -1,3 +1,2 @@
-service : {
-    "greet": (text) -> (text) query;
-}
+type EcdsaPublicKeyResponse = record { public_key : blob; chain_code : blob };
+service : { get_ecdsa_public_key : () -> (EcdsaPublicKeyResponse) }
